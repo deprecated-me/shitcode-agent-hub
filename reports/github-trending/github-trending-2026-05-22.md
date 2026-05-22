@@ -10,24 +10,24 @@
 5. rohitg00/agentmemory — TypeScript — 7,000 stars this week
 
 ## 2) 主題趨勢
-- Agent tooling 仍是榜單主旋律，但今天更明顯往「可直接套進個人工作流」收斂，personal AI、code knowledge graph、academic research workflow、persistent memory 全都在前五。
-- 語言分布開始更分散：除了 Rust、TypeScript、Python 這組老班底，Swift 也靠 on-device TTS 衝進前段，代表本地推論與端側體驗題材正在升溫。
-- Skills / workflow 導向 repo 持續吸星，`academic-research-skills`、`mattpocock/skills`、`obra/superpowers` 都說明「把 agent 能力包成可複用方法」仍很熱。
-- 本週熱門不只寫 code，聲音生成、bot detection 對抗、WiFi spatial intelligence 這些偏 infrastructure 或 edge capability 的題材，仍在高位維持能見度。
+- Agent workflow 依然是本週主軸，但焦點更集中在「可直接嵌入日常工作流」的題材：personal AI、code knowledge graph、academic research workflow、persistent memory 同時卡進前五。
+- 語言分布比前幾天更分散。Rust、TypeScript、Python 仍穩，但 Swift 靠 `supertone-inc/supertonic` 衝進前段，顯示端側推論與本地體驗開始拿到更高注意力。
+- Skills / methodology 類 repo 持續強勢。除了 Top 5 的 `Imbad0202/academic-research-skills`，榜內還有 `mattpocock/skills`、`obra/superpowers`，代表「把 agent 能力封裝成可複用工作法」仍是熱門敘事。
+- 熱點不只停留在 coding assistant。榜內還看得到 stealth browser、WiFi spatial intelligence、video generation 等基礎能力型專案，說明資金與注意力仍在往 agent 周邊基建擴散。
 
 ## 3) 值得追蹤專案
-- colbymchenry/codegraph：一天內從 6,731 拉到 10,749 weekly stars，增幅非常陡，而且直接綁定 Claude Code、Codex、Cursor、OpenCode 這些高流量入口。
-- Imbad0202/academic-research-skills：從前幾天的榜內題材升到今天頁面第 3，代表 research workflow 這條線開始進入主流視野，不再只是 skills 長尾。
-- tinyhumansai/openhuman：雖然 rolling weekly stars 從 19,177 回到 17,399，但仍維持頁面第 1，說明 GitHub Trending 排序不只看單一星數絕對值，熱度還在。
-- supertone-inc/supertonic：今天新衝進已保存樣本的 Top 5，主打 on-device multilingual TTS，若端側 AI 體驗繼續升溫，這類 repo 很可能續強。
-- rohitg00/agentmemory：從 5/16 以來幾乎每天都維持高能見度，agent memory / persistence 仍是最穩定的 infra 題材之一。
+- colbymchenry/codegraph：從 2026-05-20 的 4,650 到今天 10,749，本週 stars 三天增加 6,099，成長斜率是目前樣本裡最兇的一支，而且題材直接貼近 Claude Code、Codex、Cursor、OpenCode。
+- tinyhumansai/openhuman：雖然 rolling weekly stars 比昨天回落，但已連 3 天維持頁面第一，顯示 personal AI / local-first agent 這條線的熱度還沒退。
+- Imbad0202/academic-research-skills：今天衝到頁面第 3，代表 research workflow 不再只是 skills 長尾，而是開始進入主流 agent 工具視野。
+- supertone-inc/supertonic：本次保存樣本裡首次打進 Top 5，且主打 on-device multilingual TTS；若 edge AI 持續升溫，這類端側語音基建值得持續盯。
+- mattpocock/skills：雖然不在今日 Top 5，但今天仍有 17,535 stars this week，絕對吸星能力依舊很高，適合當作「方法論型 repo」是否能長期留量的指標。
 
-## 4) 歷史比對（對照 2026-05-15、2026-05-16、2026-05-17、2026-05-18、2026-05-20、2026-05-21 已保存報告）
-- 新進榜：若只看頁面 Top 5，`Imbad0202/academic-research-skills`、`supertone-inc/supertonic` 是相較 2026-05-21 的新成員；其中 `supertonic` 也是目前已保存樣本裡首次進入 Top 5。
-- 連續上榜：`tinyhumansai/openhuman` 連 3 天維持頁面第 1；`rohitg00/agentmemory` 自 2026-05-16 起持續高能見度；`Imbad0202/academic-research-skills` 自 2026-05-17 起連續出現在已保存報告樣本中。
-- 掉出前排：2026-05-20 與 2026-05-21 還在 Top 5 的 `CloakHQ/CloakBrowser`、`ruvnet/RuView` 今天讓位給更偏 workflow / creator tooling 的 `academic-research-skills` 與 `supertonic`。
-- 成長異常：`colbymchenry/codegraph` 一天內 weekly stars 增加 4,018，是目前已保存樣本中最陡的短期增長之一；`academic-research-skills` 也從 2026-05-21 的 8,737 增到 10,737。相對地，`openhuman`、`agentmemory` 的 weekly stars 較昨日下滑，顯示 GitHub weekly trending 是 rolling window，數值回落不代表熱度一定轉弱。
+## 4) 歷史比對（對照已保存報告：2026-05-15、2026-05-16、2026-05-17、2026-05-18、2026-05-20、2026-05-21）
+- 新進榜：相較 2026-05-21 的 Top 5，`Imbad0202/academic-research-skills`、`supertone-inc/supertonic` 是今天的新成員；其中 `supertone-inc/supertonic` 在既有報告中查不到完整 repo 名，可視為目前已保存樣本裡的「未出現 / 新進榜候選」。
+- 連續上榜：`tinyhumansai/openhuman` 自 2026-05-20 起連 3 天維持頁面第 1；`rohitg00/agentmemory` 自 2026-05-15 起每天都出現在已保存樣本；`Imbad0202/academic-research-skills` 自 2026-05-17 起持續在報告中可見。
+- 成長異常：`colbymchenry/codegraph` 從 2026-05-20 的 4,650 漲到今天 10,749，三天內增加 6,099；`Imbad0202/academic-research-skills` 也從 2026-05-21 的 8,737 增到今天 10,737。相對地，`tinyhumansai/openhuman`、`rohitg00/agentmemory` 的 weekly stars 較昨日回落，這比較像 GitHub weekly rolling window 的自然滑動，不代表熱度一定轉弱。
+- 掉出前排：2026-05-20 與 2026-05-21 還在 Top 5 的 `CloakHQ/CloakBrowser`、`ruvnet/RuView` 今天讓位給更偏 workflow / creator tooling 的 `academic-research-skills` 與 `supertonic`，榜首敘事明顯從 stealth / sensing 轉向實用型 agent workflow。
 
 ## 備註
-- 今日 Top 5 依 GitHub Trending 頁面順序整理。
-- GitHub Trending 頁面順序與「本週 stars 絕對值」不完全一致，因此排名不等於單純依 weekly stars 由高到低排序。
+- 今日 Top 5 依 GitHub Trending 頁面順序整理，不是單純照本週 stars 絕對值排序。
+- 歷史比對優先以完整 repo 名做 `rg -F` 檢索；對 `supertone-inc/supertonic` 的歷史結果為「查無完整 repo 名」，本次按規則視為未出現 / 新進榜候選，而非錯誤。
