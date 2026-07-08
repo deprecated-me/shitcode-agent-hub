@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本週焦點週報 · 2026-06-26 → 07-03 · GitHub Trending</title>
+<script>document.documentElement.className += ' js';</script>
+<style>
+  :root{
+    --ink:#14110d;          /* 溫暖近黑 */
+    --ink-2:#1e1a14;
+    --panel:#211c15;
+    --panel-2:#282218;
+    --line:#3a3226;
+    --cream:#f3e9da;
+    --cream-dim:#c9bda6;
+    --muted:#8c8069;
+    --gold:#e6a94a;         /* 主色：琥珀金 */
+    --gold-soft:#f0c579;
+    --teal:#4fb8a8;         /* 新進榜 */
+    --coral:#e8735a;        /* 爆發 / 退潮強調 */
+    --violet:#9d86c9;       /* 次要點綴（非漸層背景） */
+    --slate:#6f7d8c;        /* 退潮 */
+    --shadow:0 18px 40px -22px rgba(0,0,0,.8);
+    --serif:"Charter","Bitstream Charter","Cambria","Georgia",serif;
+    --mono:"JetBrains Mono","IBM Plex Mono",ui-monospace,"SFMono-Regular","Menlo","Consolas",monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ink:#f4ecdd; --ink-2:#efe5d2; --panel:#fbf5e9; --panel-2:#f6eede;
+      --line:#e0d3b8; --cream:#2c241a; --cream-dim:#5a4f3c; --muted:#8a7c62;
+      --gold:#b6801f; --gold-soft:#8a5f13; --teal:#1f8a78; --coral:#c24a30;
+      --violet:#6e569f; --slate:#4d5a68; --shadow:0 18px 40px -26px rgba(90,70,30,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#14110d; --ink-2:#1e1a14; --panel:#211c15; --panel-2:#282218;
+    --line:#3a3226; --cream:#f3e9da; --cream-dim:#c9bda6; --muted:#8c8069;
+    --gold:#e6a94a; --gold-soft:#f0c579; --teal:#4fb8a8; --coral:#e8735a;
+    --violet:#9d86c9; --slate:#6f7d8c; --shadow:0 18px 40px -22px rgba(0,0,0,.8);
+  }
+  :root[data-theme="light"]{
+    --ink:#f4ecdd; --ink-2:#efe5d2; --panel:#fbf5e9; --panel-2:#f6eede;
+    --line:#e0d3b8; --cream:#2c241a; --cream-dim:#5a4f3c; --muted:#8a7c62;
+    --gold:#b6801f; --gold-soft:#8a5f13; --teal:#1f8a78; --coral:#c24a30;
+    --violet:#6e569f; --slate:#4d5a68; --shadow:0 18px 40px -26px rgba(90,70,30,.45);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--ink);
+    color:var(--cream);
+    font-family:var(--serif);
+    line-height:1.68;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 12% -5%, rgba(230,169,74,.10), transparent 42%),
+      radial-gradient(circle at 92% 8%, rgba(79,184,168,.07), transparent 40%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px 96px}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(230,169,74,.28)}
+  a:hover{color:var(--gold-soft);border-bottom-color:var(--gold-soft)}
+  code,.mono{font-family:var(--mono)}
+
+  /* ---------- header ---------- */
+  header.hero{padding:64px 0 40px;border-bottom:2px solid var(--line);position:relative}
+  .kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .kicker::before{content:"";width:34px;height:2px;background:var(--gold)}
+  h1{font-family:var(--mono);font-weight:700;font-size:clamp(30px,6vw,58px);line-height:1.04;
+    margin:22px 0 8px;letter-spacing:-.01em}
+  h1 .accent{color:var(--gold)}
+  .daterange{font-family:var(--mono);color:var(--cream-dim);font-size:15px;letter-spacing:.04em}
+  .lede{font-size:clamp(18px,2.4vw,22px);max-width:64ch;margin:26px 0 4px;color:var(--cream)}
+  .lede b{color:var(--gold-soft);font-weight:600}
+
+  /* ---------- key numbers ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:34px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;
+    position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)}
+  .stat.t::before{background:var(--teal)} .stat.c::before{background:var(--coral)} .stat.v::before{background:var(--violet)}
+  .stat .num{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--cream);line-height:1}
+  .stat .num small{font-size:15px;color:var(--cream-dim);font-weight:500}
+  .stat .lab{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+  /* ---------- section scaffolding ---------- */
+  section{padding-top:58px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+  .sec-no{font-family:var(--mono);color:var(--gold);font-size:14px;letter-spacing:.2em}
+  h2{font-family:var(--mono);font-size:clamp(21px,3.2vw,29px);font-weight:700;margin:0;letter-spacing:-.01em}
+  .sec-sub{color:var(--muted);font-size:15px;margin:6px 0 26px;max-width:70ch}
+
+  /* ---------- takeaways ---------- */
+  .takes{display:grid;gap:14px}
+  .take{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+    background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);
+    border-radius:10px;padding:18px 20px}
+  .take .idx{font-family:var(--mono);font-size:26px;font-weight:700;color:var(--gold);line-height:1;opacity:.9}
+  .take h3{margin:0 0 4px;font-family:var(--serif);font-size:18px;font-weight:700;color:var(--cream)}
+  .take p{margin:0;color:var(--cream-dim);font-size:15.5px}
+  .take p b{color:var(--gold-soft)}
+
+  /* ---------- quadrants ---------- */
+  .quad{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 20px 8px;position:relative}
+  .q-h{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:700;font-size:16px;
+    margin-bottom:4px;letter-spacing:.02em}
+  .q-h .dot{width:11px;height:11px;border-radius:3px;transform:rotate(45deg)}
+  .q-sub{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+  .q.enter{border-top:3px solid var(--teal)} .q.enter .dot{background:var(--teal)} .q.enter .q-h{color:var(--teal)}
+  .q.reign{border-top:3px solid var(--gold)} .q.reign .dot{background:var(--gold)} .q.reign .q-h{color:var(--gold)}
+  .q.boom{border-top:3px solid var(--coral)} .q.boom .dot{background:var(--coral)} .q.boom .q-h{color:var(--coral)}
+  .q.fade{border-top:3px solid var(--slate)} .q.fade .dot{background:var(--slate)} .q.fade .q-h{color:var(--slate)}
+  ul.rows{list-style:none;margin:0;padding:0}
+  ul.rows li{padding:11px 0;border-top:1px dashed var(--line);font-size:14.5px}
+  ul.rows li:first-child{border-top:none}
+  ul.rows .repo{font-family:var(--mono);font-weight:600;font-size:14px}
+  ul.rows .meta{color:var(--muted);font-size:12.5px;display:block;margin-top:2px}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+    padding:2px 7px;border-radius:20px;border:1px solid var(--line);color:var(--cream-dim);margin-left:6px;
+    vertical-align:middle}
+  .pill-num{font-family:var(--mono);color:var(--gold-soft);font-weight:700}
+
+  /* ---------- theme cards ---------- */
+  .themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .theme{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;position:relative;
+    overflow:hidden}
+  .theme::after{content:attr(data-num);position:absolute;right:14px;top:6px;font-family:var(--mono);
+    font-size:52px;font-weight:700;color:var(--line);opacity:.55;line-height:1}
+  .theme h3{margin:0 0 4px;font-family:var(--mono);font-size:16.5px;color:var(--gold);font-weight:700;position:relative}
+  .theme .cat{font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.08em;margin-bottom:10px}
+  .theme p{margin:0 0 10px;font-size:14.5px;color:var(--cream-dim)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;background:var(--panel-2);
+    border:1px solid var(--line);color:var(--cream)}
+  .chip.lang{color:var(--violet)}
+
+  /* ---------- timeline ---------- */
+  .tl{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+  .tl-item{position:relative;padding:0 0 24px}
+  .tl-item::before{content:"";position:absolute;left:-36px;top:5px;width:14px;height:14px;border-radius:50%;
+    background:var(--ink);border:3px solid var(--gold)}
+  .tl-item.now::before{background:var(--gold);box-shadow:0 0 0 4px rgba(230,169,74,.2)}
+  .tl-date{font-family:var(--mono);font-size:13px;color:var(--gold);letter-spacing:.05em}
+  .tl-item h3{margin:2px 0 4px;font-size:16.5px;color:var(--cream);font-weight:700}
+  .tl-item p{margin:0;font-size:14.5px;color:var(--cream-dim)}
+
+  /* ---------- bar chart ---------- */
+  .bars{display:grid;gap:11px;margin-top:6px}
+  .bar-row{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:center;font-size:14px}
+  .bar-lab{font-family:var(--mono);font-size:13px;text-align:right;color:var(--cream);overflow:hidden;
+    text-overflow:ellipsis;white-space:nowrap}
+  .bar-track{position:relative;background:var(--panel-2);border:1px solid var(--line);border-radius:7px;height:30px;overflow:hidden}
+  .bar-fill{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;
+    font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--ink);border-radius:6px 0 0 6px;
+    background:linear-gradient(90deg,var(--gold-soft),var(--gold));white-space:nowrap;min-width:34px}
+  .bar-row.alt .bar-fill{background:linear-gradient(90deg,#7fd0c3,var(--teal))}
+  html.js .bar-fill{width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+  .bar-note{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+  /* ---------- watch list ---------- */
+  .watch{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .w{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:16px 18px;
+    border-left:3px solid var(--violet)}
+  .w .repo{font-family:var(--mono);font-weight:700;font-size:14.5px;color:var(--cream)}
+  .w p{margin:6px 0 0;font-size:13.8px;color:var(--cream-dim)}
+
+  footer{margin-top:64px;padding-top:26px;border-top:2px solid var(--line);color:var(--muted);
+    font-family:var(--mono);font-size:12.5px;line-height:1.9}
+
+  /* ---------- progressive enhancement reveal ---------- */
+  html.js .reveal{opacity:0;transform:translateY(18px)}
+  html.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+  @media (prefers-reduced-motion:reduce){
+    html.js .reveal{opacity:1;transform:none}
+    html.js .bar-fill{transition:none}
+  }
+  @media (max-width:720px){
+    .quad{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:120px 1fr}
+    .take{grid-template-columns:1fr;gap:6px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">本週焦點 · Weekly Skill Focus · GitHub Trending</div>
+    <h1>Agent 生態進入<br><span class="accent">記憶層 × 應用層</span>雙引擎期</h1>
+    <div class="daterange">分析區間　2026-06-26 → 2026-07-03　·　8 份週榜日報　·　30 天歷史比對基準</div>
+    <p class="lede">本週趨勢從六月中的「Skills 方法論＋本地基建大亂鬥」，收斂成 <b>Agent 記憶／知識層</b> 與 <b>垂直應用 Agent</b> 的規模化競爭：<b>OpenMontage</b>（影片）與 <b>codebase-memory-mcp</b>（記憶）雙雙連霸整週，而早期霸主 <b>headroom</b>、<b>markitdown</b>、<b>last30days-skill</b> 集體退潮掉出前段。</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">8<small> / 8 天</small></div>
+        <div class="lab">OpenMontage 與 codebase-memory-mcp 本週天天進 Top 5</div>
+      </div>
+      <div class="stat t">
+        <div class="num">19<small> 次</small></div>
+        <div class="lab">Agent-Reach 30 天內進 Top 5 次數最多，最持久專案</div>
+      </div>
+      <div class="stat c">
+        <div class="num">50,528</div>
+        <div class="lab">daily_stock_analysis 06-28 單週星數，全月最高峰值</div>
+      </div>
+      <div class="stat v">
+        <div class="num">5<small> 檔退潮</small></div>
+        <div class="lab">headroom·markitdown·last30days·container·agent-skills 本週全數掉出 Top 5</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. TAKEAWAYS -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">01</span><h2>本週焦點 Takeaways</h2></div>
+    <p class="sec-sub reveal">跨本週 8 份日報彙整，反覆出現的專案、主題與 agent skill 走向。</p>
+    <div class="takes">
+      <div class="take reveal"><div class="idx">1</div><div>
+        <h3>記憶層成為 Agent 的新標配基建</h3>
+        <p><b>codebase-memory-mcp</b> 整週穩居 Top 2（自 06-18 起連霸），06-27 單日再爆 <b>+94.6%</b>；<b>topoteretes/cognee</b>（知識圖譜引擎）06-30 首進 Top 5。「持久記憶 + 知識圖譜」已從副題材升格為主賽道。</p>
+      </div></div>
+      <div class="take reveal"><div class="idx">2</div><div>
+        <h3>垂直應用 Agent 開始各據山頭</h3>
+        <p>影片（<b>OpenMontage</b>）、金融（<b>daily_stock_analysis</b>）、投資研究（<b>ai-berkshire</b>）、行銷觸達（<b>Agent-Reach</b>）同框 Top 5。Agent 已從「通用工具」走向「產業垂直規模化競爭」。</p>
+      </div></div>
+      <div class="take reveal"><div class="idx">3</div><div>
+        <h3>Skills 方法論熱潮退燒，接力棒交給「規範」</h3>
+        <p>六月中霸榜的 <b>last30days-skill</b>、<b>addyosmani/agent-skills</b>、<b>pm-skills</b>、<b>SkillSpector</b> 本週集體退潮；接手的是 <b>google-labs-code/design.md</b>——為編碼 Agent 定義視覺識別規範，代表社群從「教 Agent 技能」轉向「約束 Agent 產出」。</p>
+      </div></div>
+      <div class="take reveal"><div class="idx">4</div><div>
+        <h3>Context／Token 效率成為明確採購點</h3>
+        <p>新進的 <b>OmniRoute</b> 以單端點串接 231+ 供應商、RTK+Caveman 疊加壓縮省下 15–95% tokens；搭配記憶層降低重複脈絡，反映開發者對「多模型路由 + 成本優化」的真實付費意願。</p>
+      </div></div>
+      <div class="take reveal"><div class="idx">5</div><div>
+        <h3>安全、品質與隱私回潮</h3>
+        <p><b>no-mistakes</b>（git push 安全）、<b>Anthropic-Cybersecurity-Skills</b>（817 個資安技能）、去識別化通訊 <b>simplex-chat</b> 週末重返 Top 5。在 Agent 大規模自動化下，「防呆與可控」的需求同步升溫。</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- 2. QUADRANTS -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">02</span><h2>榜單動態四象限</h2></div>
+    <p class="sec-sub reveal">以近 30 天全部日報為基準，將本週 Top 5 專案分為四類。</p>
+    <div class="quad">
+      <div class="q enter reveal">
+        <div class="q-h"><span class="dot"></span>新進榜</div>
+        <div class="q-sub">本週首次進入 Top 5</div>
+        <ul class="rows">
+          <li><span class="repo"><a href="https://github.com/google-labs-code/design.md">google-labs-code/design.md</a></span><span class="tag">TypeScript</span><span class="meta">06-28 首進 Top 5，編碼 Agent 視覺識別規範，連續 5 天在榜</span></li>
+          <li><span class="repo"><a href="https://github.com/topoteretes/cognee">topoteretes/cognee</a></span><span class="tag">Python</span><span class="meta">06-30 首進 Top 5，開源 Agent 記憶／知識圖譜平台</span></li>
+          <li><span class="repo"><a href="https://github.com/ZhuLinsen/daily_stock_analysis">ZhuLinsen/daily_stock_analysis</a></span><span class="tag">Python</span><span class="meta">06-27 首進 Top 5，LLM 多市場股票分析，隨即衝上 50,528</span></li>
+          <li><span class="repo"><a href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire</a></span><span class="tag">Python</span><span class="meta">07-02 首進 Top 5，四大師方法論 AI 價值投資框架</span></li>
+          <li><span class="repo"><a href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat</a></span><span class="tag">Haskell</span><span class="meta">07-03 進 Top 5，100% 去識別化私密通訊（間歇性熱門）</span></li>
+        </ul>
+      </div>
+
+      <div class="q reign reveal">
+        <div class="q-h"><span class="dot"></span>連續霸榜</div>
+        <div class="q-sub">跨多日／多週持續在榜</div>
+        <ul class="rows">
+          <li><span class="repo"><a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a></span><span class="tag">Python</span><span class="meta">自 06-09 起連續在榜逾 <span class="pill-num">20</span> 天，全網零 API 費用資料攝取</span></li>
+          <li><span class="repo"><a href="https://github.com/calesthio/OpenMontage">calesthio/OpenMontage</a></span><span class="tag">Python</span><span class="meta">自 06-22 起連續 <span class="pill-num">12</span> 天，本週天天 Top 5，Agentic 影片生產</span></li>
+          <li><span class="repo"><a href="https://github.com/DeusData/codebase-memory-mcp">DeusData/codebase-memory-mcp</a></span><span class="tag">C</span><span class="meta">自 06-18 起連續在榜，本週天天 Top 2，158 語言知識圖譜 MCP</span></li>
+        </ul>
+      </div>
+
+      <div class="q boom reveal">
+        <div class="q-h"><span class="dot"></span>爆發成長</div>
+        <div class="q-sub">本週單週星數增速最猛</div>
+        <ul class="rows">
+          <li><span class="repo"><a href="https://github.com/ZhuLinsen/daily_stock_analysis">ZhuLinsen/daily_stock_analysis</a></span><span class="meta">06-28 衝上 <span class="pill-num">50,528</span> 週星，全月最高絕對峰值</span></li>
+          <li><span class="repo"><a href="https://github.com/calesthio/OpenMontage">calesthio/OpenMontage</a></span><span class="meta">06-28 單日 <span class="pill-num">+18,000</span>（+114%），峰值 25,231 週星</span></li>
+          <li><span class="repo"><a href="https://github.com/DeusData/codebase-memory-mcp">DeusData/codebase-memory-mcp</a></span><span class="meta">06-27 單日 <span class="pill-num">+94.6%</span>，06-28 續增至 17,626</span></li>
+          <li><span class="repo"><a href="https://github.com/stablyai/orca">stablyai/orca</a></span><span class="meta">07-03 相對 07-02 <span class="pill-num">+16.1%</span>，Agent 開發環境穩定加速</span></li>
+        </ul>
+      </div>
+
+      <div class="q fade reveal">
+        <div class="q-h"><span class="dot"></span>退潮掉榜</div>
+        <div class="q-sub">前期常在、本週掉出或消失</div>
+        <ul class="rows">
+          <li><span class="repo"><a href="https://github.com/chopratejas/headroom">chopratejas/headroom</a></span><span class="meta">30 天內 Top 5 達 17 次（06-04→06-22 的王者），本週完全消失</span></li>
+          <li><span class="repo"><a href="https://github.com/mvanhorn/last30days-skill">mvanhorn/last30days-skill</a></span><span class="meta">06-09→06-17 連續 9 天霸榜（多天 #1），本週掉出</span></li>
+          <li><span class="repo"><a href="https://github.com/microsoft/markitdown">microsoft/markitdown</a></span><span class="meta">六月初文件轉換代表作（連 7 天），本週已無蹤影</span></li>
+          <li><span class="repo"><a href="https://github.com/apple/container">apple/container</a></span><span class="meta">06-13→06-19 本地容器熱潮（7 天），本週退場</span></li>
+          <li><span class="repo"><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a></span><span class="meta">Skills 方法論代表（6 天），06-24 後未再進 Top 5</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THEMES -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">03</span><h2>主題多維分類</h2></div>
+    <p class="sec-sub reveal">依當週實際內容歸納的主題維度；程式語言為次要標籤。</p>
+    <div class="themes">
+      <div class="theme reveal" data-num="A">
+        <h3>Agent 記憶 &amp; 知識層</h3>
+        <div class="cat">MEMORY / KNOWLEDGE</div>
+        <p>持久記憶與知識圖譜成為本週最強賽道，整週佔據 Top 2～Top 5 多席。</p>
+        <div class="chips"><span class="chip">codebase-memory-mcp</span><span class="chip">cognee</span><span class="chip">Agent-Reach</span><span class="chip lang">C · Python</span></div>
+      </div>
+      <div class="theme reveal" data-num="B">
+        <h3>垂直應用 Agent</h3>
+        <div class="cat">VERTICAL APPS</div>
+        <p>影片、金融、投資、行銷各自出現規模化 Agent，應用層競爭白熱化。</p>
+        <div class="chips"><span class="chip">OpenMontage</span><span class="chip">daily_stock_analysis</span><span class="chip">ai-berkshire</span><span class="chip lang">Python</span></div>
+      </div>
+      <div class="theme reveal" data-num="C">
+        <h3>Agent skill 生態系 &amp; 規範</h3>
+        <div class="cat">SKILLS / STANDARDS</div>
+        <p>熱點由「技能包」轉向「產出規範」，設計與流程標準化浪潮成形。</p>
+        <div class="chips"><span class="chip">design.md</span><span class="chip">craft-agents-oss</span><span class="chip lang">TypeScript</span></div>
+      </div>
+      <div class="theme reveal" data-num="D">
+        <h3>Context / Token 效率</h3>
+        <div class="cat">EFFICIENCY</div>
+        <p>多模型路由與脈絡壓縮成為明確採購點，直接對應成本節省。</p>
+        <div class="chips"><span class="chip">OmniRoute</span><span class="chip">codebase-memory-mcp</span><span class="chip lang">TypeScript</span></div>
+      </div>
+      <div class="theme reveal" data-num="E">
+        <h3>Agent 安全與品質</h3>
+        <div class="cat">SAFETY / QUALITY</div>
+        <p>自動化規模擴大帶動防呆與資安技能需求，週末明顯回潮。</p>
+        <div class="chips"><span class="chip">no-mistakes</span><span class="chip">Anthropic-Cybersecurity-Skills</span><span class="chip lang">Go · Python</span></div>
+      </div>
+      <div class="theme reveal" data-num="F">
+        <h3>本地執行環境 · 基建</h3>
+        <div class="cat">RUNTIME / INFRA</div>
+        <p>終端機原生 Agent 編排與開發環境補足輕量化調度空缺。</p>
+        <div class="chips"><span class="chip">herdr</span><span class="chip">stablyai/orca</span><span class="chip lang">Rust · TypeScript</span></div>
+      </div>
+      <div class="theme reveal" data-num="G">
+        <h3>互動層 · 產品化入口</h3>
+        <div class="cat">INTERACTION</div>
+        <p>自然語言操控 GUI、隱私通訊與行程協作，把 Agent 帶到終端使用者面前。</p>
+        <div class="chips"><span class="chip">alibaba/page-agent</span><span class="chip">simplex-chat</span><span class="chip">TREK</span><span class="chip lang">TS · Haskell</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TIMELINE -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">04</span><h2>30 天主題演變時間軸</h2></div>
+    <p class="sec-sub reveal">從 05 下旬到 07 初，週榜主敘事的四次接力。</p>
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-date">05 下旬 – 06 初</div>
+        <h3>知識圖譜 · 記憶 · 研究工作流</h3>
+        <p>codegraph、openhuman、academic-research-skills、agentmemory 領軍，Agent infra 直攻「開發效率」。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-date">06 初 – 06 中</div>
+        <h3>內容生產 &amp; 文件轉換 + Context Engineering</h3>
+        <p>MoneyPrinterTurbo、markitdown 承接生產力，headroom 把 context engineering 推成長線霸主。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-date">06 中</div>
+        <h3>Skills 方法論 &amp; 本地基建大爆發</h3>
+        <p>last30days-skill、addyosmani/agent-skills、NVIDIA/SkillSpector、pm-skills、apple/container 輪番霸榜。</p>
+      </div>
+      <div class="tl-item reveal now">
+        <div class="tl-date">06 下 – 07 初（本週）</div>
+        <h3>記憶層 × 垂直應用雙引擎 + 規範／隱私回潮</h3>
+        <p>codebase-memory-mcp、cognee 撐起記憶層；OpenMontage、daily_stock_analysis、ai-berkshire 撐起應用層；design.md 立規範、simplex-chat 補隱私。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BAR CHART -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">05</span><h2>30 天最持久專案</h2></div>
+    <p class="sec-sub reveal">近 30 天（06-04 → 07-03）進入 Top 5 的累計天數。金色＝仍活躍於本週；青色＝本週已退潮。</p>
+    <div class="bars" id="bars">
+      <div class="bar-row reveal"><div class="bar-lab">Agent-Reach</div><div class="bar-track"><div class="bar-fill" data-w="100">19 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">headroom</div><div class="bar-track"><div class="bar-fill" data-w="89">17 天</div></div></div>
+      <div class="bar-row reveal"><div class="bar-lab">codebase-memory-mcp</div><div class="bar-track"><div class="bar-fill" data-w="63">12 天</div></div></div>
+      <div class="bar-row reveal"><div class="bar-lab">OpenMontage</div><div class="bar-track"><div class="bar-fill" data-w="58">11 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">last30days-skill</div><div class="bar-track"><div class="bar-fill" data-w="47">9 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">markitdown</div><div class="bar-track"><div class="bar-fill" data-w="37">7 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">apple/container</div><div class="bar-track"><div class="bar-fill" data-w="37">7 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">NVIDIA/SkillSpector</div><div class="bar-track"><div class="bar-fill" data-w="37">7 天</div></div></div>
+      <div class="bar-row alt reveal"><div class="bar-lab">iptv-org/iptv</div><div class="bar-track"><div class="bar-fill" data-w="37">7 天</div></div></div>
+    </div>
+    <p class="bar-note reveal">統計口徑：以每份日報的「今日 Top 5」為準，累計整月出現次數（週末缺檔日不計）。Agent-Reach 與 headroom 分別代表「長線在榜」與「早期霸主退潮」兩種典型。</p>
+  </section>
+
+  <!-- 6. WATCH LIST -->
+  <section>
+    <div class="sec-head reveal"><span class="sec-no">06</span><h2>值得追蹤清單</h2></div>
+    <p class="sec-sub reveal">本週最值得持續盯緊的專案，涵蓋加速樣本與結構性新賽道。</p>
+    <div class="watch">
+      <div class="w reveal"><div class="repo"><a href="https://github.com/calesthio/OpenMontage">calesthio/OpenMontage</a></div><p>全球首個開源 Agentic 影片系統，12 條 pipeline、52 工具、500+ agent 技能，連 12 天在榜。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/DeusData/codebase-memory-mcp">DeusData/codebase-memory-mcp</a></div><p>158 語言知識圖譜 MCP，記憶層核心基建，穩居 Top 2、成長率驚人。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/topoteretes/cognee">topoteretes/cognee</a></div><p>開源 Agent 記憶平台，本週黑馬（單週 +5,519），知識圖譜引擎新賽道。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/diegosouzapw/OmniRoute">diegosouzapw/OmniRoute</a></div><p>免費 AI 閘道，單端點 231+ 供應商，RTK+Caveman 壓縮省 15–95% tokens。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire</a></div><p>四大師方法論多 Agent 對抗分析，連續創新高，價值投資 × Agent 跨界典範。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/stablyai/orca">stablyai/orca</a></div><p>Agent 開發環境，連續多週增長、07-03 加速 +16.1%，觀察能否突破 4,000。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/ogulcancelik/herdr">ogulcancelik/herdr</a></div><p>Rust 終端機 Agent 多工器，讓多 agent 背景協作，補輕量化編排空缺。</p></div>
+      <div class="w reveal"><div class="repo"><a href="https://github.com/google-labs-code/design.md">google-labs-code/design.md</a></div><p>編碼 Agent 視覺識別規範，代表「約束 Agent 產出」的標準化浪潮。</p></div>
+    </div>
+  </section>
+
+  <footer>
+    本週焦點 skill 週報　·　產生日期 2026-07-03（星期五）<br>
+    資料來源：reports/github-trending/（GitHub Trending 週榜日報，since=weekly）<br>
+    彙整區間 2026-06-26 → 2026-07-03，共 8 份日報；30 天歷史比對基準 2026-06-04 → 2026-07-03<br>
+    註：週末可能缺檔已略過；日報 Top 5 兼含純文字與 markdown／表格三種格式，均已解析。
+  </footer>
+
+</div>
+
+<script>
+  // 漸進增強：內容預設全部可見，僅在支援 JS 時做進場動畫與長條圖填充
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function fillBars(){
+      document.querySelectorAll('.bar-fill').forEach(function(el){
+        el.style.width = (el.getAttribute('data-w')||0) + '%';
+      });
+    }
+    if(!('IntersectionObserver' in window) || reduce){
+      document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+      fillBars();
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          if(e.target.id === 'bars') fillBars();
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var bars = document.getElementById('bars'); if(bars) io.observe(bars);
+    // 保險：若圖表已在視窗內
+    setTimeout(function(){
+      var r = bars && bars.getBoundingClientRect();
+      if(r && r.top < window.innerHeight) fillBars();
+    }, 300);
+  })();
+</script>
+</body>
+</html>
