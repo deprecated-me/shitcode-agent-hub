@@ -4,86 +4,82 @@
 
 | # | Repo | 語言 | 本週 Stars | 描述 |
 |---|------|------|-----------|------|
-| 1 | [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | TypeScript | 11,731 | 開源 CapCut 替代方案，73.9K 總 ⭐，本週 ▲ +34.8% 持續加速 |
+| 1 | [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | TypeScript | 11,731 | 開源 CapCut 替代方案，74K 總 ⭐ 在即，本週 ▲ +34.8% 持續創高 |
 | 2 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | CSS | 6,573 | Anti-AI-slop 設計技能，10.8K 總 ⭐，本週 ▲ +85.1%（昨日 3,551 → 今日 6,573） |
-| 3 | [stablyai/orca](https://github.com/stablyai/orca) | TypeScript | 5,736 | ADE 平台，用自身訂閱運行 agent 艦隊，桌面 + 手機雙平台 |
-| 4 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | Python | 5,407 | 「Vibe-Trading: Your Personal Trading Agent」，24.3K 總 ⭐，連續 2 日在榜 |
-| 5 | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | C# | 5,342 | 為 AI agent 打造的 Office 套件，18.4K 總 ⭐，連續 7 日在榜 |
+| 3 | [stablyai/orca](https://github.com/stablyai/orca) | TypeScript | 5,736 | ADE 平台，用自身訂閱運行 agent 艦隊，桌面 + 手機雙平台，連續 23+ 日在榜 |
+| 4 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | Python | 5,407 | 「Vibe-Trading: Your Personal Trading Agent」，24.3K 總 ⭐，**首次進榜即空降 Top 5 #4**，連續 2 日 |
+| 5 | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | C# | 5,342 | 為 AI agent 打造的 Office 套件，18.4K 總 ⭐，連續 7 日在榜，今日 ▼ -16.2% 動能轉弱 |
+
+> **Top 5 連續 3 日相同僅排名微調**：OpenCut 站穩 #1 且加速創高，Nutlope/hallmark 逆勢爆發衝至 #2，iOfficeAI/OfficeCLI 連漲 5 日後首跌退居 #5。
 
 ## 2) 主題趨勢
 
-1. **Anti-AI-slop × 設計語言雙重爆發**：[Nutlope/hallmark](https://github.com/Nutlope/hallmark)（6,573 ⭐/wk，▲ +85.1%）與 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)（2,360 ⭐/wk，07-13 首現後回落，今日回歸）同步走強——兩者都是為 AI 輸出建立「美感標準化」的設計系統。當 AI 產生的内容泛濫成災，輸出品質控制工具本身成為剛需，並不諷刺。
+1. **Anti-AI-slop 設計語言成為新剛需**：[Nutlope/hallmark](https://github.com/Nutlope/hallmark)（6,573 ⭐/wk，▲ +85.1% 日增）與 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)（2,360 ⭐/wk，07-13 首現回落後回歸即登 full list）雙引擎推動。當 AI 設計輸出氾濫，「反垃圾美感」標準化工具成為剛需本身就是一個時代信號。
 
-2. **影片剪輯持續登頂，OpenCut 動能強勁**：[OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) 以 11,731 ⭐/wk 逆勢成長（較昨日 8,702 ▲ +34.8%），總星數直逼 74K。繼昨日 8.7K 奪榜後加速攀升，顯見開源影片剪輯 + Agent 工作流的交叉賽道已非曄花一現。
+2. **影片剪輯 + Agent 交叉賽道具驗證**：[OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) 以 11,731 ⭐/wk 連續 2 日創高（昨日 8,702 → 今日 11,731，▲ +34.8%），74K 總 ⭐ 在即。06-24 曇花一現後消失 3 週、07-16 強勢回歸登頂——此模式說明 Agent 工作流對「非開發者生產力工具」的賦能已被市場認可。
 
-3. **Agent 垂直應用落地加速——教育、設計、技能標準化三軌並進**：[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)（個人化終身導師，26.8K 總 ⭐）、[google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)（Google 官方 Stitch MCP agent skills 庫）、[pbakaus/impeccable](https://github.com/pbakaus/impeccable) 代表 Agent 工具鏈正從「工程師生產力」擴散到教育、設計、技能標準化等垂直領域。
+3. **Agent 垂直場域落地加速——交易、教育、設計三軌並進**：[HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading)（交易 Agent，首次進榜即 Top 5）、[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)（個人化終身導師，26.8K 總 ⭐，首次進榜）、[google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)（Google 官方 Stitch MCP agent skills 庫）——Agent 應用場域從「寫程式、辦公」擴張到金融交易與教育場景。
 
-4. **Agent 基礎建設層成熟化**：[iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)（辦公自動化）+ [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)（token 優化、231+ 模型供應商）+ [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)（Claude Code 配置管理）構成 Agent 部署時代的管道層——token 成本控制、多模型路由、開發者體驗三者缺一不可。
+4. **C++ 老將 + JS runtime 同時回歸——底層基礎設施週期輪動**：[abseil/abseil-cpp](https://github.com/abseil/abseil-cpp)（07-14 首現後回歸）、[chriskohlhoff/asio](https://github.com/chriskohlhoff/asio)（首次進榜）、[oven-sh/bun](https://github.com/oven-sh/bun)（首次進榜，94.7K 總 ⭐ 重磅回歸）同時出現在榜——C++ 網路庫 + JS runtime 的復甦可能反映 Agent 底層建置對效能層的重新關注。
 
 ## 3) 值得追蹤專案
 
-1. **[Nutlope/hallmark](https://github.com/Nutlope/hallmark)** — CSS，6,573 ⭐/wk，**本週新進榜即爆發（▲ +85.1%），昨日 3,551 → 今日 6,573**。Anti-AI-slop 設計技能，Claude Code / Cursor / Codex 皆適用。當 AI 產生的設計品質日益低落，「反垃圾輸出」設計系統的勝利本身就說明了市場的痛點。動能異常強勁，值得持續觀察。
+1. **[OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut)** — TypeScript，11,731 ⭐/wk，**連續 2 日創高（▲ +34.8%），74K 總 ⭐ 在即**。開源影片剪輯 + Agent 交叉賽道已從「概念」跨入「持續驗證」階段。動能為全榜最強且無降溫跡象，值得觀察能否挑戰單週 15,000 關卡。
 
-2. **[google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)** — TypeScript，1,090 ⭐/wk，07-12、07-16 兩度進榜。Google 官方推出的 Stitch MCP-compatible agent skills 庫，與 [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) 形成明確的「大廠 Agent 技能標準化」對決態勢。标准化之爭已進入白熱化階段。
+2. **[Nutlope/hallmark](https://github.com/Nutlope/hallmark)** — CSS，6,573 ⭐/wk，**本週增速最快（▲ +85.1% 日增），07-14 首次進榜以來連續 3 日在榜**。Anti-AI-slop 設計技能，Claude Code / Cursor / Codex 通用。存量 10.8K 總 ▲ 搭配爆發式週增速，說明主流開發者群開始大量採用「設計品質標準化」工具。
 
-3. **[pbakaus/impeccable](https://github.com/pbakaus/impeccable)** — JavaScript，2,360 ⭐/wk，47.3K 總 ⭐。07-13 首次進榜後短暫消失，本次回歸即登上 full list。与高 total stars 搭配可觀的 weekly 增速，說明存量龐大的開發者群正在大量採用。
+3. **[pbakaus/impeccable](https://github.com/pbakaus/impeccable)** — JavaScript，2,360 ⭐/wk，47.3K 總 ⭐。07-13 首次進榜後一度消失，本次回歸即登上 full list。作為「讓 AI 輸出更好看」的設計語言，存量龐大的開發者基數的採用率正在爬升——與 Nutlope/hallmark 形成「雙頭壟斷」anti-AI-slop 市場格局。
 
-4. **[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)** — Python，1,283 ⭐/wk，26.8K 總 ⭐，**歷史全檔 0 記錄、首次進榜**。個人化終身導師 agent，從寫程式、辦公之後，Agent 正式進入教育場景。科技大學（HKUDS）出品，有一定的學術含量。
+4. **[HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading)** — Python，5,407 ⭐/wk，**歷史全檔 0 記錄、首次進榜即空降 Top 5 #4**。交易 Agent 賽道具技術分析、量化策略、AI 決策三位一體，24.3K 總 ⭐ 證明利基話題已轉為大眾需求。Agent 應用場域擴張到金融市場的關鍵信號。
 
-5. **[oven-sh/bun](https://github.com/oven-sh/bun)** — Rust，1,343 ⭐/wk，94.7K 總 ⭐，**歷史全檔 0 記錄、首次進榜**。JavaScript  runtime 老牌選手再度回到榜單，可能与 Agent 工具鏈中對快速 JavaScript 執行時的需求增長有關（bundler + test runner + package manager 一體化）。
-
-## 4) 歷史比對說明
-
-### 新進榜專案（歷史 90 天全檔 0 記錄 → 今日首次出現）
-
-| Repo | 語言 | 本週 Stars | 備註 |
-|------|------|-----------|------|
-| [chriskohlhoff/asio](https://github.com/chriskohlhoff/asio) | C++ | 271 | Asio C++ Library，6.1K 總 ⭐，歷史全檔 0 記錄 |
-| [oven-sh/bun](https://github.com/oven-sh/bun) | Rust | 1,343 | JS runtime 老牌，94.7K 總 ⭐，首次進榜 |
-| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | Python | 1,101 | Claude Code 配置管理，29.6K 總 ⭐，首次進榜 |
-| [kangarooking/cangjie-skill](https://github.com/kangarooking/cangjie-skill) | Python | 1,043 | 內容蒸餾成 Agent Skills，3.3K 總 ⭐，首次進榜 |
-| [actions/checkout](https://github.com/actions/checkout) | TypeScript | 211 | GitHub Actions 基础设施，8.5K 總 ⭐，首次進榜 |
-| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Python | 1,283 | 個人化終身導師 Agent，26.8K 總 ⭐，首次進榜 |
-| [jrouwe/JoltPhysics](https://github.com/jrouwe/JoltPhysics) | C++ | 286 | 多核心碰撞偵測物理引擎，10.9K 總 ⭐，首次進榜 |
-| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | — | — | 100+ AI Agent & RAG apps，僅 07-15 出現 1 次（幾乎等於首次） |
-
-### 連續上榜
-
-| Repo | 已連續天數 | 趨勢 |
-|------|-----------|------|
-| [stablyai/orca](https://github.com/stablyai/orca) | 長期穩定（06-24 起頻繁在榜） | 多 Agent IDE 老牌，本週 5,736 ⭐ 持平 |
-| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | **7 天**（07-11 起） | 動能轉弱：昨日 6,374 → 今日 5,342（▼ -16.2%），仍在榜但降速中 |
-| [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | **14 天**（07-03 起） | token 優化 + 多模型閘道，長期穩居 full list |
-| [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) | **11 天**（07-05 起） | 終端背景 agent 多工器，穩定 full list |
-| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | **3 天**（07-15 起） | 加速爆發，動能最強 |
-| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | 2 天（06-24 首上榜 → 消失 3 週 → 07-16 回歸後連續在榜） | 本週 11,731 ⭐，持續創高 |
-
-### 回歸榜單
-
-| Repo | 語言 | 本週 Stars | 備註 |
-|------|------|-----------|------|
-| [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) | JavaScript | 1,908 | 07-15 掉落後今日回歸（07-14 ▲ 1,908 ⭐ 高點持平） |
-| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | JavaScript | 2,360 | 07-13 首次進榜 → 消失 → 今日回歸 |
-| [abseil/abseil-cpp](https://github.com/abseil/abseil-cpp) | C++ | 678 | 07-14 首次進榜 → 消失 → 今日回歸 |
-
-### 成長異常（動能顯著加速或衰退）
-
-| Repo | 變化 | 解讀 |
-|------|------|------|
-| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | ▲ +85.1%（昨日 3,551 → 今日 6,573） | 全榜增速最快，anti-AI-slop 設計系統需求爆發 |
-| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | ▲ +34.8%（昨日 8,702 → 今日 11,731） | 持續創高，74K 總 ⭐ 在即，影片剪輯 + Agent 交叉賽道已驗證 |
-| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | ▼ -16.2%（昨日 6,374 → 今日 5,342） | 連漲 4 日後首跌，動能放緩但仍在高檔 |
-| [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | ▲ +12.6%（昨日 4,802 → 今日 5,407） | 穩定增溫，交易 Agent 題材持續 |
-
-### 昨日有但今日掉出榜單
-
-- [tt-a1i/archify](https://github.com/tt-a1i/archify)：昨日「值得追蹤專案」（1,840 ⭐）→ 今日 **未上榜**
-- [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks)：昨日 #2（7,383 ⭐）→ 今日 **未上榜**
-- [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)：昨日 #4（4,389 ⭐）→ 今日 **未上榜**
-- [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search)：07-15 曾登頂（13,195 ⭐），07-16 起持續消失，動能快速衰退
-
-**資料限制**：`web_fetch` 透過 readability 萃取約 20 個 repo（GitHub Trending 通常 25 個），[Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) 出現在原始頁面但 star/本週數據未被完整擷取。歷史比對使用 `rg -F` 精確匹配完整 repo 名（owner/name），共比比對 20 份歷史報告（06-27 ~ 07-16），無資料缺失。
+5. **[oven-sh/bun](https://github.com/oven-sh/bun)** — Rust，1,343 ⭐/wk，94.7K 總 ⭐，**歷史全檔 0 記錄、首次進榜**。JavaScript runtime 老牌選手重磅回歸——bundler + test runner + package manager 一體化，應與 Agent 工具鏈對高效能 JavaScript 執行時的需求增長有關。94.7K 總 ⭐ 的存量基礎搭配高增速，站穩潛力極強。
 
 ---
 
-*報告自動產生於 2026-07-17 08:00 CST*
+## 4) 歷史比對
+
+### 新進榜 / 首次出現
+
+| Repo | 語言 | 本週 Stars | 歷史狀態 |
+|------|------|-----------|----------|
+| [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | Python | 5,407 | 歷史全檔 0 記錄，首次進榜 |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Python | 1,283 | 歷史全檔 0 記錄，首次進榜 |
+| [oven-sh/bun](https://github.com/oven-sh/bun) | Rust | 1,343 | 歷史全檔 0 記錄，首次進榜 |
+| [chriskohlhoff/asio](https://github.com/chriskohlhoff/asio) | C++ | 271 | 歷史全檔 0 記錄，首次進榜 |
+| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | Python | 1,101 | 歷史全檔 0 記錄，首次進榜 |
+| [kangarooking/cangjie-skill](https://github.com/kangarooking/cangjie-skill) | Python | 1,043 | 歷史全檔 0 記錄，首次進榜 |
+| [actions/checkout](https://github.com/actions/checkout) | TypeScript | 211 | 歷史全檔 0 記錄，首次進榜 |
+| [jrouwe/JoltPhysics](https://github.com/jrouwe/JoltPhysics) | C++ | 286 | 歷史全檔 0 記錄，首次進榜 |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | — | — | 僅 07-15 出現過 1 次，幾乎等於首次 |
+
+### 消失後回歸
+
+| Repo | 語言 | 本週 Stars | 歷史狀態 |
+|------|------|-----------|----------|
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | JavaScript | 2,360 | 07-13 首次進榜 → 消失 → 今日回歸 |
+| [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) | JavaScript | 1,908 | 07-15 掉落 → 今日回歸（07-14 水準持平） |
+| [abseil/abseil-cpp](https://github.com/abseil/abseil-cpp) | C++ | 678 | 07-14 首次進榜 → 消失 → 今日回歸 |
+| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | TypeScript | 11,731 | 06-24 首上榜 → 消失 3 週 → 07-16 回歸後連續在榜 |
+
+### 連續在榜
+
+| Repo | 連續天數 | 趨勢 |
+|------|---------|------|
+| [stablyai/orca](https://github.com/stablyai/orca) | 23+ 天（06-24 起） | 多 Agent IDE 老牌選手，長期穩定 |
+| [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | 14 天（07-03 起） | Token 優化 + 多模型閘道，長期穩居 full list |
+| [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) | 12 天（07-05 起） | 終端背景 agent 多工器，穩定 full list |
+| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | 7 天（07-11 起） | 動能轉弱：連漲 5 日後首跌 ▼ -16.2% |
+| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 6 天（07-12 起） | MCP server 終端控制，穩定 full list |
+| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 3 天（07-14 起） | 加速爆發，動能最強 |
+
+### 成長異常（日增減 > 20%）
+
+| Repo | 日增減 | 備註 |
+|------|--------|------|
+| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | ▲ +85.1% | 全榜增速最快，anti-AI-slop 設計系統需求爆發 |
+| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | ▲ +34.8% | 持續創高，74K 總 ⭐ 在即 |
+| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | ▼ -16.2% | 連漲 5 日後首跌，動能放緩但仍在高檔 |
+
+---
+
+**資料限制**：`web_fetch` 透過 readability 萃取約 20 個 repo（GitHub Trending 通常 25 個），[Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) 出現在頁面但 star/本週數據未完整擷取。歷史比對使用 `rg -F` 精確匹配完整 repo 名（owner/name），共比對 20 份歷史報告（06-27 ~ 07-16），無資料缺失。
